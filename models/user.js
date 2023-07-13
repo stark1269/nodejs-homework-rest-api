@@ -18,7 +18,7 @@ const UserSchema = mongoose.Schema({
   token: {
     type: String,
     default: null,
-  }
+  },
 },
   {
     versionKey: false,
