@@ -2,7 +2,7 @@ const app = require('./app');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-const DB_URI = process.env.DB_URI;
+const { DB_URI } = process.env;
 
 const run = async () => {
   try {

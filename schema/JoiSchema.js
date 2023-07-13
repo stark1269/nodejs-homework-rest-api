@@ -11,7 +11,13 @@ const joiSchemaFavorite = Joi.object({
   favorite: Joi.boolean().required(),
 });
 
+const joiSchemaRegisterAndLogin = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required(),
+});
+
 module.exports = {
   joiSchemaAll,
   joiSchemaFavorite,
-}
+  joiSchemaRegisterAndLogin,
+};
