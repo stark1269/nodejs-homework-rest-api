@@ -11,7 +11,18 @@ const joiSchemaFavorite = Joi.object({
   favorite: Joi.boolean().required(),
 });
 
+const joiSchemaRegisterAndLogin = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(6).required(),
+});
+
+const joiSchemaSubscription = Joi.object({
+  subscription: Joi.string().valid('starter', 'pro', 'business').required(),
+});
+
 module.exports = {
   joiSchemaAll,
   joiSchemaFavorite,
-}
+  joiSchemaRegisterAndLogin,
+  joiSchemaSubscription,
+};
