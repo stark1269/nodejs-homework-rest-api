@@ -23,6 +23,14 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  verify: {
+    type: Boolean,
+    default: false,
+  },
+  verificationToken: {
+    type: String,
+    required: true,
+  },
 },
   {
     versionKey: false,
