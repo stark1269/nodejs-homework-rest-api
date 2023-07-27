@@ -16,6 +16,10 @@ const joiSchemaRegisterAndLogin = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
+const joiSchemaVerifyEmail = Joi.object({
+  email: Joi.string().email().required(),
+});
+
 const joiSchemaSubscription = Joi.object({
   subscription: Joi.string().valid('starter', 'pro', 'business').required(),
 });
@@ -24,5 +28,6 @@ module.exports = {
   joiSchemaAll,
   joiSchemaFavorite,
   joiSchemaRegisterAndLogin,
+  joiSchemaVerifyEmail,
   joiSchemaSubscription,
 };
